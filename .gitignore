@@ -36,3 +36,6 @@ desktop.ini
 
 .claude
 .memsearch
+
+# API server: user-saved reference voices
+/voices/
