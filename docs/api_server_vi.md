@@ -28,6 +28,8 @@ uv run api_server.py --host 0.0.0.0 --port 8000 --fp16 --api_key "doi-key-nay"
 | `--voices_dir` | Thư mục lưu giọng mẫu, mặc định `./voices` |
 | `--max_text_chars` | Độ dài văn bản tối đa, mặc định 3000 |
 
+Thư mục `checkpoints/` của bản 2.5 phải có: `config.yaml`, `gpt.pth`, `s2mel.pth`, `codec.pth`, `multilingual_zh_ja_yue_char_del.tiktoken`, `wav2vec2bert_stats.pt`.
+
 Mỗi lần server chỉ sinh **một** request. Request đến sau sẽ phải chờ. Lần đầu dùng một giọng mới sẽ chậm hơn, các lần sau với cùng giọng sẽ dùng cache.
 
 ## Endpoint

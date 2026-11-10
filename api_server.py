@@ -48,7 +48,8 @@ cmd_args = parser.parse_args()
 IS_V25 = cmd_args.version == "2.5"
 
 if IS_V25:
-    required = ["bpe.model", "gpt.pth", "s2mel.pth", "config.yaml"]
+    required = ["gpt.pth", "s2mel.pth", "codec.pth", "multilingual_zh_ja_yue_char_del.tiktoken",
+                "wav2vec2bert_stats.pt", "config.yaml"]
 else:
     required = ["bpe.model", "gpt.pth", "s2mel.pth", "wav2vec2bert_stats.pt", "config.yaml"]
 missing = [f for f in required if not os.path.exists(os.path.join(cmd_args.model_dir, f))]
